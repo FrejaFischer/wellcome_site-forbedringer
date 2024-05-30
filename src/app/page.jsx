@@ -5,6 +5,8 @@ import MedlemsSection from "./components/landingpage/MedlemsSection";
 import styles from "./landingpage.module.scss";
 import Layout from "./components/global/Layout";
 
+//test
+
 export default function Home() {
   return (
     <Layout current={{ nav: "", site: "" }}>
