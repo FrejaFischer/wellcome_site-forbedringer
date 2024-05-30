@@ -1,0 +1,146 @@
+@use "src/app/variables" as *;
+
+.card {
+  margin-bottom: $spacing-8;
+  height: 130px;
+  color: $white;
+  border-radius: $border-radius;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  filter: grayscale(100%);
+
+  .overlay {
+    height: 90px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.703), rgba(255, 0, 0, 0));
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+
+    .title {
+      padding-top: $spacing-12;
+      padding-left: $spacing-16;
+      font-size: $spacing-20;
+      color: $white;
+    }
+  }
+}
+
+.indoor_cycling {
+  background-image: url("../../img/kategorier/wellcome_indoor_cycling.jpg");
+  background-position: 30% 55%;
+}
+
+.energy {
+  background-image: url("../../img/kategorier/wellcome_energy.jpg");
+  background-position: 30% 65%;
+}
+
+.functional {
+  background-image: url("../../img/kategorier/wellcome_functional.jpg");
+  background-position: 30% 65%;
+}
+
+.heat {
+  background-image: url("../../img/kategorier/wellcome_heat.jpg");
+  background-position: 20% 45%;
+}
+
+.nordic_strong {
+  background-image: url("../../img/kategorier/wellcome_nordic_strong.jpg");
+  background-position: 20% 15%;
+}
+
+.pleasure {
+  background-image: url("../../img/kategorier/wellcome_pleasure.jpg");
+  background-position: 20% 50%;
+}
+
+.body_mind {
+  background-image: url("../../img/kategorier/wellcome_body_mind.jpg");
+  background-position: 20% 70%;
+}
+
+.reformer {
+  background-image: url("../../img/kategorier/wellcome_reformer.jpg");
+  background-position: 20% 35%;
+}
+
+/* Desktop breakpoint */
+@media (min-width: 768px) {
+  .link {
+    margin: 0 $spacing-4;
+
+    .card {
+      position: relative;
+      margin: 0;
+      height: 450px;
+      min-width: 180px;
+      top: 0;
+      transition: filter 0.2s ease, top 0.2s ease;
+
+      &:hover {
+        filter: grayscale(0);
+        top: 8%;
+
+        .overlay .title {
+          text-decoration: underline;
+        }
+      }
+
+      .overlay {
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.703), rgba(255, 0, 0, 0));
+        height: 100%;
+        width: 100px;
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: $border-radius;
+
+        .title {
+          position: relative;
+          padding-top: 0;
+          padding-left: 0;
+          font-size: $spacing-24;
+          font-weight: $font-regular;
+          rotate: -90deg;
+          white-space: nowrap;
+          top: 80%;
+          left: -5px;
+          text-decoration: none; // Remove default underline
+          transition: text-decoration 0.25s ease-out; // Add transition for smooth effect
+        }
+      }
+    }
+
+    .indoor_cycling {
+      background-position: 50% 55%;
+    }
+
+    .energy {
+      background-position: 55% 65%;
+    }
+
+    .functional {
+      background-position: 90% 65%;
+    }
+
+    .heat {
+      background-position: 70% 45%;
+    }
+
+    .nordic_strong {
+      background-position: 58% 15%;
+    }
+
+    .pleasure {
+      background-position: 80% 50%;
+    }
+
+    .body_mind {
+      background-position: 50% 70%;
+    }
+
+    .reformer {
+      background-position: 20% 35%;
+    }
+  }
+}

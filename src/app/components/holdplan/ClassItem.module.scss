@@ -1,0 +1,127 @@
+@use "src/app/variables" as *;
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 $spacing-24;
+  width: auto;
+  height: $spacing-80;
+
+  .input {
+    position: absolute;
+    appearance: none;
+    width: 100%;
+    height: 100%;
+    background-color: $white;
+    border: solid $border-width $off-black400;
+
+    &:hover,
+    &:checked,
+    &:focus {
+      background-color: $off-black400;
+      border: none;
+      outline: none;
+
+      + .label {
+        color: $white;
+
+        .grey_text {
+          color: $grey300;
+        }
+      }
+    }
+  }
+
+  .label {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    align-items: center;
+    width: 100%;
+
+    font-family: $poppins-font;
+    font-size: $spacing-12;
+    font-weight: $font-regular;
+    line-height: $line-height-m;
+
+    span:nth-of-type(1),
+    span:nth-of-type(3) {
+      width: fit-content;
+      justify-self: start;
+      padding: $spacing-4 0 $spacing-4 $spacing-8;
+    }
+    span:nth-of-type(2),
+    span:nth-of-type(4) {
+      width: fit-content;
+      justify-self: end;
+      padding: $spacing-4 $spacing-8 $spacing-4 0;
+    }
+    .grey_text {
+      color: $grey400;
+    }
+    .desk_btn_section {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 850px) {
+  .container {
+    width: auto;
+    margin: 0;
+    max-width: 1050px;
+
+    .input {
+      &:hover,
+      &:checked,
+      &:focus {
+        background-color: $off-black400;
+        border: none;
+        outline: none;
+
+        + .label {
+          .grey_text {
+            color: $white;
+          }
+          .desk_btn_section {
+            display: block;
+          }
+        }
+      }
+    }
+
+    .label {
+      font-size: $spacing-16;
+      grid-template-columns: 1fr 3fr 2fr 2fr 192px;
+
+      span:nth-of-type(1) {
+        width: 122px;
+        justify-self: unset;
+        padding: $spacing-20 $spacing-12;
+      }
+      span:nth-of-type(2) {
+        max-width: 256px;
+        justify-self: unset;
+        padding: $spacing-20 $spacing-12;
+      }
+      span:nth-of-type(3) {
+        width: 196px;
+        justify-self: unset;
+        padding: $spacing-20 $spacing-12;
+      }
+      span:nth-of-type(4) {
+        width: 134px;
+        justify-self: unset;
+        padding: $spacing-20 $spacing-12;
+      }
+      .grey_text {
+        color: $black;
+      }
+      .desk_btn_section {
+        display: none;
+      }
+    }
+  }
+}

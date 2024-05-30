@@ -1,0 +1,17 @@
+@use "src/app/variables" as *;
+
+.footer_link {
+  color: $white;
+  text-decoration: underline;
+  text-transform: none;
+  font-family: $raleway-font;
+  font-size: $spacing-16;
+  width: fit-content;
+
+  &:visited {
+    color: $white;
+  }
+  &:hover {
+    color: $brand-color400;
+  }
+}

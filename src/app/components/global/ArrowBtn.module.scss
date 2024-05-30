@@ -1,0 +1,37 @@
+@use "src/app/variables" as *;
+
+.arrow {
+  border-style: none;
+  background-color: transparent;
+  color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: $spacing-80;
+  height: $spacing-8;
+}
+
+.left {
+  background-image: url("../../icon/arrow-left.svg");
+  background-position: right;
+
+  &:hover {
+    background-image: url("../../icon/arrow-left-hover.svg");
+  }
+}
+
+.right {
+  background-image: url("../../icon/arrow-left.svg");
+  transform: scaleX(-1);
+  background-position: right;
+
+  &:hover {
+    background-image: url("../../icon/arrow-left-hover.svg");
+    transform: scaleX(-1);
+  }
+}
+
+@media (min-width: 768px) {
+  .arrow {
+    height: $spacing-16;
+  }
+}

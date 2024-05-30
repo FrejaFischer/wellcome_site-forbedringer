@@ -1,0 +1,78 @@
+@use "src/app/variables" as *;
+
+.footer_section {
+  background-color: $off-black400;
+  display: grid;
+  justify-content: space-between;
+  height: auto;
+  padding: 54px;
+
+  .svg {
+    padding-right: $spacing-8;
+  }
+  p {
+    color: $white;
+    font-family: $raleway-font;
+    line-height: 200%;
+    font-size: $spacing-16;
+  }
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+  .right,
+  .center,
+  .left {
+    width: 334px;
+  }
+
+  .right {
+    order: 2;
+  }
+
+  .center {
+    order: 3;
+  }
+  .left {
+    order: 1;
+  }
+
+  .some_icons {
+    flex-direction: row;
+    width: $spacing-80;
+    place-content: left;
+  }
+  svg {
+    width: $spacing-16;
+    height: $spacing-16;
+    fill: $white;
+    &:hover {
+      fill: $brand-color400;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .footer_section {
+    display: flex;
+    padding-left: 130px;
+    padding-right: 130px;
+
+    .center {
+      place-items: center;
+    }
+    .right {
+      place-items: end;
+      order: 3;
+    }
+    .some_icons {
+      place-content: center;
+      justify-content: space-evenly;
+    }
+
+    svg {
+      width: $spacing-20;
+      height: $spacing-20;
+    }
+  }
+}

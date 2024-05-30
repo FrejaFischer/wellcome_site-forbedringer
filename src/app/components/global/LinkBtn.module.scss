@@ -1,0 +1,80 @@
+@use "src/app/variables" as *;
+
+.wellcome_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  height: 30px;
+}
+.margin {
+  margin-top: $spacing-16;
+}
+
+.primary {
+  color: $black;
+  background-color: $brand-color400;
+
+  &:hover {
+    background-color: $olive-400;
+  }
+}
+
+.secondary {
+  color: $white;
+  background-color: $off-black400;
+
+  &:hover {
+    color: $black;
+    background-color: transparent;
+    border: $border-width solid $off-black400;
+  }
+}
+
+.tertiary_dark {
+  color: $black;
+  background-color: transparent;
+  border: $border-width solid $off-black400;
+
+  &:hover {
+    color: $white;
+    background-color: $off-black400;
+    border: none;
+  }
+}
+.tertiary_light {
+  color: $white;
+  background-color: transparent;
+  border: $border-width solid $white;
+
+  &:hover {
+    color: $black;
+    background-color: $white;
+    border: none;
+  }
+}
+
+.spa {
+  color: $brown400;
+  background-color: $white;
+
+  &:hover {
+    color: $white;
+    background-color: $brown400;
+    border: $border-width solid $white;
+  }
+}
+
+@media (min-width: 768px) {
+  .margin {
+    margin-top: $spacing-24;
+  }
+
+  .wellcome_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 40px;
+  }
+}

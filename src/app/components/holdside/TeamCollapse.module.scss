@@ -1,0 +1,11 @@
+@use "src/app/variables" as *;
+
+.team_collapse {
+  margin: $spacing-48;
+}
+
+@media (min-width: 895px) {
+  .team_collapse {
+    display: none;
+  }
+}

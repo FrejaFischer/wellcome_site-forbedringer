@@ -1,0 +1,62 @@
+@use "src/app/variables" as *;
+
+.list_item {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin-top: $spacing-12;
+
+  .nav_btn {
+    width: fit-content;
+    color: $white;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .nav_btn:nth-of-type(1),
+  .nav_btn:nth-of-type(2),
+  .nav_btn:nth-of-type(3) {
+    margin-bottom: $spacing-24;
+  }
+
+  .active {
+    text-decoration: underline;
+  }
+  .sub_nav_link {
+    width: fit-content;
+    margin: $spacing-12 0;
+    color: $white;
+    font-size: $spacing-12;
+
+    &:visited {
+      color: $white;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0.2;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+
+  .visible {
+    opacity: 1;
+    animation: fadeIn 0.4s ease-in-out;
+  }
+  .hide {
+    display: none;
+  }
+}

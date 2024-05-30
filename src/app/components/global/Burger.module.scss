@@ -1,0 +1,77 @@
+@use "src/app/variables" as *;
+
+.burger_nav {
+  width: fit-content;
+  height: fit-content;
+  display: inline-flex;
+  place-self: end;
+
+  .burger_btn {
+    border: none;
+    background-color: transparent;
+    color: transparent;
+
+    .burger {
+      position: relative;
+      z-index: 2;
+      display: block;
+      cursor: pointer;
+
+      .bar,
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        width: 30px;
+        height: 2px;
+        border-radius: 5px;
+        background-color: $white;
+        margin: 0 0 $spacing-8 0px;
+        transition: 0.8s;
+      }
+    }
+    .is_active::before {
+      transform: rotate(45deg) translate(9px, 6px);
+    }
+    .is_active::after {
+      transform: rotate(-45deg) translate(7px, -5px);
+    }
+    .is_active .bar {
+      opacity: 0;
+    }
+  }
+
+  .burger_menu {
+    height: 100%;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 1;
+    padding-top: $spacing-80;
+    padding-left: $spacing-64;
+    background-color: $off-black400;
+
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-24;
+
+    li {
+      list-style: none;
+    }
+  }
+  .appear {
+    right: 0;
+    transition: 0.8s;
+  }
+  .disappear {
+    right: -105%;
+    transition: 0.8s;
+  }
+}
+
+@media (min-width: 1120px) {
+  .burger_nav {
+    display: none;
+  }
+}

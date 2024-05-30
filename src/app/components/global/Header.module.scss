@@ -1,0 +1,52 @@
+@use "src/app/variables" as *;
+
+.header {
+  padding: $spacing-20 8%;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+
+  &.scrolled {
+    background-color: $off-black400;
+  }
+
+  &:hover {
+    background-color: $off-black400;
+  }
+  .link_img {
+    align-content: end;
+    display: grid;
+    img {
+      place-self: center;
+      z-index: 2;
+      position: relative;
+    }
+  }
+  div {
+    display: none;
+  }
+  @media (min-width: 1120px) {
+    .link_img {
+      align-content: center;
+    }
+    div {
+      display: flex;
+      nav {
+        align-self: center;
+        width: 530px;
+        padding-right: $spacing-64;
+        ul {
+          display: flex;
+          justify-content: space-between;
+          list-style: none;
+        }
+        li {
+          position: relative;
+        }
+      }
+    }
+  }
+}
+// }

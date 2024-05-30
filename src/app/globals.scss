@@ -1,0 +1,82 @@
+@use "src/app/variables" as *;
+
+//Mobile
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+h1 {
+  color: $white;
+  font-size: $spacing-32;
+  font-weight: $font-light;
+  line-height: $line-height-s;
+}
+
+h2 {
+  font-size: $spacing-24;
+  font-weight: $font-regular;
+  line-height: $line-height-m;
+  color: $off-black400;
+}
+
+h3 {
+  font-size: $spacing-24;
+  font-weight: $font-regular;
+  text-transform: uppercase;
+  line-height: $line-height-m;
+  color: $white;
+}
+
+p {
+  font-family: $poppins-font;
+  font-size: $spacing-12;
+  font-weight: $font-light;
+  line-height: $line-height-m;
+  color: $off-black400;
+}
+
+button {
+  font-size: $spacing-16;
+  font-weight: $font-light;
+  line-height: $line-height-m;
+  text-transform: uppercase;
+}
+
+a {
+  font-size: $spacing-12;
+  font-weight: $font-regular;
+  line-height: $line-height-m;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* Desktop breakpoint */
+@media (min-width: 768px) {
+  h1 {
+    font-size: $spacing-64;
+  }
+
+  h2 {
+    font-size: $spacing-32;
+  }
+
+  h3 {
+    font-size: $spacing-32;
+  }
+
+  p {
+    font-size: $spacing-16;
+  }
+
+  a {
+    font-size: $spacing-16;
+  }
+}

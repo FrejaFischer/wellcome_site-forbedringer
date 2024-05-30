@@ -1,0 +1,76 @@
+@use "src/app/variables" as *;
+
+.medlems_Link {
+  color: $white;
+
+  &:hover {
+    text-decoration: underline;
+  }
+  h3 {
+    font-weight: $font-light;
+    font-size: $spacing-16;
+    line-height: 250%;
+  }
+}
+
+.medlems_card {
+  height: $spacing-250;
+  width: $spacing-250;
+  margin-top: $spacing-12;
+  margin-bottom: $spacing-12;
+  margin-left: $spacing-24;
+  margin-right: $spacing-24;
+  border-radius: $border-radius;
+  display: flex;
+  box-shadow: 0 $spacing-4 $spacing-4 rgba(0, 0, 0, 0.25);
+  filter: grayscale(100%);
+  &:hover {
+    filter: grayscale(0%);
+  }
+}
+.overlay {
+  display: flex;
+  place-content: center;
+  align-items: end;
+  border-radius: $border-radius;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.703), rgba(255, 0, 0, 0));
+}
+
+.medlems_image1 {
+  background-image: url("../../img/medlemskab/image1.png");
+  height: $spacing-250;
+  width: $spacing-250;
+  background-size: contain;
+}
+.medlems_image2 {
+  background-image: url("../../img/medlemskab/image2.png");
+  height: $spacing-250;
+  width: $spacing-250;
+  background-size: contain;
+}
+.medlems_image3 {
+  background-image: url("../../img/medlemskab/image3.png");
+  height: $spacing-250;
+  width: $spacing-250;
+  background-size: contain;
+}
+
+@media (min-width: 768px) {
+  .medlems_card {
+    height: $spacing-320;
+    width: $spacing-320;
+    margin-top: $spacing-24;
+    margin-bottom: $spacing-24;
+    margin-left: $spacing-12;
+    margin-right: $spacing-12;
+  }
+
+  .medlems_Link {
+    h3 {
+      line-height: 400%;
+      font-size: $spacing-24;
+    }
+  }
+}

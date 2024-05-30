@@ -1,0 +1,84 @@
+@use "src/app/variables" as *;
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: $spacing-80;
+
+  .input {
+    position: absolute;
+    appearance: none;
+    width: 100%;
+    height: 100%;
+    background-color: $white;
+    border: solid $border-width $off-black400;
+
+    &:hover,
+    &:focus {
+      background-color: $off-black400;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+
+    &:hover + .label,
+    &:focus + .label {
+      color: $white;
+    }
+
+    &:disabled {
+      background-color: $grey200;
+      cursor: inherit;
+
+      & + .label {
+        color: $black;
+      }
+      &:hover {
+        border: solid $border-width $off-black400;
+        background-color: $grey200;
+      }
+    }
+  }
+  .checked {
+    background-color: $off-black400;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    & + .label {
+      color: $white;
+    }
+  }
+  .label {
+    position: absolute;
+    color: $black;
+    font-size: $spacing-16;
+    font-weight: $font-regular;
+    line-height: $line-height-m;
+    text-transform: uppercase;
+  }
+
+  .desk_text {
+    display: none; //skjuler desktop teksten i mobileview
+  }
+
+  .mobile_text {
+    display: inline;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 100%;
+    height: 190px;
+
+    .desk_text {
+      display: inline;
+    }
+    .mobile_text {
+      display: none; //skjuler mobil teksten i desktopview
+    }
+  }
+}

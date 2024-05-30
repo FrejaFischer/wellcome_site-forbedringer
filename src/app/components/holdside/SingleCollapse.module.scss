@@ -1,0 +1,58 @@
+@use "src/app/variables" as *;
+
+.single_container {
+  margin-bottom: $spacing-16;
+  .title_button {
+    margin-top: $spacing-12;
+    border: none;
+    background: none;
+    cursor: pointer;
+
+    &.underline {
+      text-decoration: underline solid $border-width $black;
+    }
+  }
+  .heading {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
+  .container {
+    margin-top: $spacing-8;
+    margin-bottom: $spacing-32;
+
+    .paragraph {
+      max-width: 500px;
+    }
+
+    @media (min-width: 770px) {
+      .paragraph {
+        max-width: 650px;
+      }
+    }
+  }
+  .hide {
+    display: none;
+  }
+
+  @keyframes fadeIn {
+    //Animation der bruges til collapsens indhold
+    from {
+      opacity: 0.2;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+
+  .visible {
+    opacity: 1;
+    animation: fadeIn 0.4s ease-in-out;
+  }
+}

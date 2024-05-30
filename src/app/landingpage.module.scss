@@ -1,0 +1,287 @@
+@use "src/app/variables" as *;
+// ______________________ Hero Section ______________________
+.hero_section {
+  display: grid;
+  margin: 0;
+  background-image: url("../app/img/landingpage/heroimage.png");
+
+  background-size: cover;
+  width: auto;
+  height: 500px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  justify-items: end;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero_text {
+  height: 100%;
+  align-content: end;
+  margin-right: 20%;
+  padding-bottom: 5%;
+  h1 {
+    text-align: right;
+    font-weight: $font-thin;
+  }
+}
+
+.italic_h1 {
+  font-weight: $font-medium;
+  font-style: $style-italic;
+}
+
+.btn {
+  width: 420px;
+  display: flex;
+  place-content: space-between;
+  padding-top: $spacing-24;
+  padding-left: 150px;
+}
+
+@media (min-width: 768px) {
+  .hero_section {
+    width: 100%;
+    height: 650px;
+    object-fit: cover;
+    object-position: center;
+  }
+  .btn {
+    width: 541px;
+  }
+  .hero_text {
+    margin-right: 8%;
+  }
+}
+
+// ______________________________ info section __________________________
+
+.info_section {
+  width: 100%;
+  height: 300px;
+  margin: 0;
+  display: grid;
+}
+
+.paragraph {
+  max-width: 500px;
+}
+.text_box {
+  display: none;
+}
+
+.info_box {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  width: 100%;
+  height: 100%;
+
+  svg {
+    width: 40px;
+    height: 40px;
+  }
+  p {
+    color: $white;
+    font-weight: $font-light;
+    text-align: center;
+    padding-top: $spacing-8;
+  }
+}
+
+.box1,
+.box4 {
+  display: grid;
+  background-color: $off-black300;
+  place-content: center;
+  justify-items: center;
+}
+.box2,
+.box3 {
+  display: grid;
+  background-color: $off-black400;
+  place-content: center;
+  justify-items: center;
+}
+
+@media (min-width: 768px) {
+  .text_box {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: $grey200;
+    place-content: center;
+    place-items: center;
+    padding-left: 10%;
+    padding: 10%;
+  }
+  .info_section {
+    width: 100%;
+    height: 500px;
+    grid-template-columns: 50% 50%;
+  }
+
+  .info_box {
+    svg {
+      height: $spacing-64;
+      width: $spacing-64;
+    }
+  }
+}
+
+// _________________________________ prøve time section _________________________________
+
+.proevetime_paragraph {
+  min-width: 280px;
+  text-align: left;
+}
+.align_btns {
+  display: flex;
+  justify-content: left;
+  width: 280px;
+  justify-content: space-between;
+}
+.proevetime_section {
+  display: grid;
+  justify-content: left;
+  padding: 20% 10%;
+}
+
+@media (min-width: 768px) {
+  .align_btns {
+    width: $spacing-400;
+    justify-content: space-around;
+  }
+
+  .proevetime_paragraph {
+    width: 600px;
+    text-align: center;
+  }
+  .proevetime_section {
+    justify-items: center;
+    place-content: center;
+    height: 600px;
+    padding: $spacing-80 $spacing-48 $spacing-120 $spacing-48;
+  }
+}
+
+// _________________________________Events & Nyheder _________________________________
+
+.event_section {
+  width: 100%;
+  height: 700px;
+  display: grid;
+  grid-template-rows: 50% 50%;
+}
+
+.textbox {
+  display: grid;
+  background-color: $grey200;
+  place-content: center;
+  height: 100%;
+  width: 100%;
+
+  padding: 10%;
+}
+.eventparagraph {
+  max-width: 450px;
+}
+.eventlink {
+  display: grid;
+  justify-content: center;
+  background-image: url("../app/img/landingpage/event.png");
+  background-position: center;
+  background-size: cover;
+  width: auto;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  justify-items: end;
+  object-fit: cover;
+  object-position: center;
+}
+.h3event {
+  color: $white;
+  text-align: center;
+  font-size: $spacing-16;
+  width: $spacing-400;
+  padding-bottom: $spacing-24;
+
+  .bold {
+    font-weight: $font-semibold;
+  }
+}
+.infobox {
+  place-content: end;
+}
+
+.date {
+  color: $white;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .event_section {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr;
+    max-height: 500px;
+  }
+
+  .textbox {
+    height: 528px;
+    padding: 10%;
+  }
+
+  .h3event {
+    font-size: $spacing-24;
+  }
+
+  .eventparagraph {
+    max-width: 500px;
+  }
+}
+
+//______________________________Hold kategorier_____________________________
+
+.categorytitle {
+  margin-left: 18%;
+  margin-top: 12%;
+  margin-bottom: 3%;
+}
+
+// _________________________________ Spa Section _________________________________
+
+.spa_section {
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  margin: 0;
+  object-fit: cover;
+}
+
+.header2_spa {
+  width: 300px;
+}
+
+.spa_info {
+  background-color: $brown400;
+  height: 100%;
+  width: 100%;
+  padding: 20% 10%;
+}
+
+.spa_image {
+  background-image: url("../app/img/landingpage/spa_image.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.spa_text {
+  color: $white;
+  max-width: 500px;
+}
+
+@media (min-width: 768px) {
+  .spa_section {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr;
+  }
+}

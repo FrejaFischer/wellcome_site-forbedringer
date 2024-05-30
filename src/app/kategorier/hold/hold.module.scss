@@ -1,0 +1,232 @@
+@use "src/app/variables" as *;
+
+.Indoor-cycling {
+  background-image: url("../../img/kategorier/hold/Indoor-cycling.jpg");
+  background-position: 50%;
+}
+
+.Energy {
+  background-image: url("../../img/kategorier/hold/Energy.jpg");
+  background-position: 10% 70%;
+}
+
+.Functional {
+  background-image: url("../../img/kategorier/hold/Functional.jpg");
+  background-position: 100% 90%;
+}
+
+.Heat {
+  background-image: url("../../img/kategorier/hold/Heat.jpg");
+  background-position: 65%;
+}
+
+.Nordic-strong {
+  background-image: url("../../img/kategorier/hold/Nordic-strong.jpg");
+  background-position: 65%;
+}
+
+.Pleasure {
+  background-image: url("../../img/kategorier/hold/Pleasure.jpg");
+  background-position: 50%;
+}
+
+.Body-mind {
+  background-image: url("../../img/kategorier/hold/Body-mind.jpg");
+  background-position: 50% 100%;
+}
+
+.Reformer {
+  background-image: url("../../img/kategorier/hold/Reformer.jpg");
+  background-position: 90%;
+}
+
+.hero_section {
+  height: 500px;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  padding-bottom: $spacing-80;
+  padding-left: $spacing-48;
+  padding-right: $spacing-48;
+
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.703), rgba(255, 0, 0, 0));
+    height: 60%;
+    width: 100%;
+  }
+  .hero_text {
+    display: grid;
+    align-content: end;
+    max-width: 415px;
+    z-index: 1;
+
+    .title {
+      margin-bottom: $spacing-12;
+    }
+
+    .link {
+      color: $white;
+      text-decoration: underline $border-width solid $white;
+      font-size: $spacing-12;
+      text-transform: none;
+    }
+  }
+}
+
+.personal_trainer_section {
+  background-color: $off-black400;
+  padding: $spacing-80 $spacing-48;
+
+  .trainer_paragraph {
+    max-width: 415px;
+    color: $white;
+  }
+
+  @media (min-width: 510px) {
+    display: grid;
+    place-items: center;
+
+    .trainer_paragraph {
+      text-align: center;
+    }
+  }
+  :focus {
+    outline: #0e59e4 3px solid;
+  }
+}
+
+.motivation_section {
+  .quote_section {
+    height: 250px;
+    background-color: $grey200;
+    display: grid;
+    justify-content: end;
+
+    .quote {
+      text-align: right;
+      font-size: $spacing-20;
+      margin: $spacing-48;
+
+      .bold_span {
+        font-weight: $font-bold;
+      }
+      .italic_span {
+        font-style: $style-italic;
+      }
+    }
+  }
+
+  .motivation_img {
+    width: 100%;
+    height: auto;
+    order: -1;
+  }
+}
+
+/*Tablet breakpoint*/
+@media (min-width: 768px) {
+  .motivation_section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .quote_section {
+      width: 100%;
+      height: 100%;
+
+      .quote {
+        font-size: $spacing-24;
+        margin: $spacing-32;
+
+        @media (min-width: 1140px) {
+          font-size: $spacing-32;
+          margin: $spacing-48;
+        }
+
+        @media (min-width: 1250px) {
+          margin: 92px;
+        }
+
+        .bold_span {
+          font-weight: $font-bold;
+        }
+        .italic_span {
+          font-style: $style-italic;
+        }
+      }
+    }
+
+    .motivation_img {
+      order: 2;
+    }
+  }
+}
+
+/* Desktop breakpoint */
+@media (min-width: 768px) {
+  .Functional {
+    background-image: url("../../img/kategorier/hold/Functional-new.jpg");
+    background-position: 0% 5%;
+  }
+
+  .Nordic-strong {
+    background-image: url("../../img/kategorier/hold/Nordic-strong-new.jpg");
+    background-position: 65% 10%;
+  }
+
+  .Body-mind {
+    background-image: url("../../img/kategorier/hold/Body-mind-new.jpg");
+    background-position: 90% 50%;
+  }
+
+  .Reformer {
+    background-image: url("../../img/kategorier/hold/Reformer-new.jpg");
+    background-position: 90% 5%;
+  }
+
+  .Pleasure {
+    background-image: url("../../img/kategorier/hold/Pleasure-new.jpg");
+    background-position: 50% 80%;
+  }
+
+  .Heat {
+    background-image: url("../../img/kategorier/hold/Heat-new.jpg");
+  }
+
+  .Energy {
+    background-image: url("../../img/kategorier/hold/Energy-new.jpg");
+    background-position: 10% 20%;
+  }
+
+  .Indoor-cycling {
+    background-image: url("../../img/kategorier/hold/Indoor-cycling-new.jpg");
+    background-position: 50%;
+  }
+
+  .hero_section {
+    padding-bottom: $spacing-64;
+    padding-right: $spacing-120;
+
+    .hero_text {
+      max-width: 700px;
+
+      .link {
+        font-size: $spacing-16;
+      }
+    }
+    @media (min-width: 895px) {
+      padding-left: $spacing-120;
+    }
+  }
+
+  .personal_trainer_section {
+    padding: $spacing-120 $spacing-48;
+
+    .trainer_paragraph {
+      max-width: 605px;
+    }
+  }
+}

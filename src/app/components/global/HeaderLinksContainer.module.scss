@@ -1,0 +1,42 @@
+@use "src/app/variables" as *;
+
+.button {
+  background: none;
+  border: none;
+  color: $white;
+  cursor: pointer;
+}
+
+.underline {
+  text-decoration: underline solid $border-width $white;
+}
+
+.button:hover {
+  text-decoration: underline solid $border-width $white;
+}
+
+.container {
+  position: absolute;
+  top: 52px;
+  left: -$spacing-20;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+
+  .a {
+    display: none;
+  }
+
+  .show {
+    display: block;
+    color: $off-black400;
+    margin: $spacing-12 $spacing-20;
+  }
+  .a:hover {
+    text-decoration: underline solid $border-width $off-black400;
+  }
+  .active {
+    text-decoration: underline solid $border-width $off-black400;
+  }
+}

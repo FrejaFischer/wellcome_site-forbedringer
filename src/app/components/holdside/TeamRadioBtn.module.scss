@@ -1,0 +1,42 @@
+@use "src/app/variables" as *;
+
+.input {
+  appearance: none;
+
+  &:hover,
+  &:checked,
+  &:focus {
+    background-color: $off-black400;
+    border: none;
+    outline: none;
+  }
+
+  &:checked + .label,
+  &:focus + .label,
+  &:hover + .label {
+    text-decoration: underline solid $border-width $black;
+    outline: none;
+
+    &.label {
+      transform: translate(50px);
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      left: -80px;
+      top: 29px;
+      width: 20%;
+      border-bottom: solid $border-width $black;
+    }
+  }
+}
+
+.label {
+  font-size: $spacing-24;
+  font-weight: $font-medium;
+  line-height: $line-height-m;
+  text-transform: uppercase;
+  cursor: pointer;
+  transform: translate(0);
+  transition: transform 0.5s ease;
+}

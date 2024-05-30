@@ -1,0 +1,114 @@
+@use "src/app/variables" as *;
+
+.hero_section {
+  height: 500px;
+  position: relative;
+  background-image: url("../img/kategorier/category_hero_mobile.jpg");
+  background-position: 10% 85%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  padding-bottom: $spacing-80;
+  padding-left: $spacing-48;
+  padding-right: $spacing-48;
+
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.703), rgba(255, 0, 0, 0));
+    height: 60%;
+    width: 100%;
+  }
+  .hero_text {
+    display: grid;
+    align-content: end;
+    max-width: 415px;
+    z-index: 1;
+
+    .paragraph {
+      margin-top: $spacing-12;
+      color: $white;
+    }
+  }
+}
+
+.card_container {
+  margin: $spacing-48 $spacing-16 $spacing-48 $spacing-16;
+
+  :focus {
+    outline: #0e59e4 3px solid;
+  }
+}
+
+.personal_trainer_section {
+  background-color: $grey200;
+  padding: $spacing-80 $spacing-48;
+
+  .trainer_paragraph {
+    max-width: 415px;
+  }
+
+  @media (min-width: 510px) {
+    display: grid;
+    place-items: center;
+
+    .trainer_paragraph {
+      text-align: center;
+    }
+  }
+  :focus {
+    outline: #0e59e4 3px solid;
+  }
+}
+
+/* Desktop breakpoint */
+@media (min-width: 768px) {
+  .hero_section {
+    height: 500px;
+    background-image: url("../img/kategorier/category_hero_dekstop.jpg");
+    background-position: 10% 90%;
+    display: grid;
+    padding-bottom: $spacing-120;
+    padding-left: $spacing-120;
+    padding-right: $spacing-120;
+
+    .hero_text {
+      max-width: 700px;
+
+      .title {
+        margin-bottom: $spacing-12;
+      }
+
+      .paragraph {
+        color: $white;
+        width: $spacing-480;
+      }
+    }
+  }
+
+  .card_container {
+    display: grid;
+    place-content: center;
+
+    .flex_cards {
+      display: flex;
+
+      @media (min-width: 799px) {
+        gap: 10px;
+      }
+    }
+    .flex_cards:first-child {
+      margin-bottom: $spacing-64;
+    }
+  }
+
+  .personal_trainer_section {
+    background-color: $grey200;
+    padding: $spacing-120 $spacing-48;
+
+    .trainer_paragraph {
+      max-width: 600px;
+    }
+  }
+}

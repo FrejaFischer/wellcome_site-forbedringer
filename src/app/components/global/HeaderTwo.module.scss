@@ -1,0 +1,30 @@
+@use "src/app/variables" as *;
+
+.fitness {
+  margin-bottom: $spacing-16;
+}
+
+.white {
+  color: $white;
+}
+
+.spa {
+  margin-bottom: $spacing-16;
+  color: $white;
+  font-size: $spacing-32;
+  font-family: $the-seasons;
+  font-weight: $font-regular;
+  line-height: $spacing-32;
+}
+
+@media (min-width: 768px) {
+  .fitness {
+    margin-bottom: $spacing-24;
+  }
+
+  .spa {
+    margin-bottom: $spacing-24;
+    font-size: $spacing-48;
+    line-height: $spacing-48;
+  }
+}
