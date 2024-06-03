@@ -1,6 +1,5 @@
 @use "src/app/variables" as *;
 
-//test
 .container {
   display: flex;
   justify-content: center;
@@ -18,7 +17,6 @@
   border: solid $border-width $off-black400;
   position: relative;
   cursor: pointer;
-  font-weight: $font-regular;
 
   &:hover,
   &:focus {
@@ -34,6 +32,7 @@
     background-image: url("../../img/holdplan/cross.png");
     background-size: 100% 100%;
     cursor: default;
+    font-weight: $font-xlight;
   }
 
   .desk_text {
