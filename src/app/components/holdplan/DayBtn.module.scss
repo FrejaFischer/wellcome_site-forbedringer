@@ -6,6 +6,7 @@
   align-items: center;
   width: 100%;
   height: $spacing-80;
+  position: relative;
 }
 
 .button {
@@ -14,20 +15,24 @@
   color: $off-black400;
   background-color: $white;
   border: solid $border-width $off-black400;
+  position: relative;
+  cursor: pointer;
+  font-weight: $font-regular;
 
   &:hover,
-  &:focus,
-  &:active {
+  &:focus {
     color: $white;
     background-color: $off-black400;
-    // border: solid $border-width $white;
     outline: none;
   }
 
   &:disabled {
-    color: $grey400;
-    background-color: $grey200;
+    background-color: transparent;
+    color: #848484;
     border: solid $border-width $off-black400;
+    background-image: url("../../img/holdplan/cross.png");
+    background-size: 100% 100%;
+    cursor: default;
   }
 
   .desk_text {
@@ -48,11 +53,18 @@
 }
 
 .chosen {
-  background-color: $off-black400;
-  color: $white;
+  background-color: $brand-color400;
   border: none;
   outline: none;
   cursor: pointer;
+  border: solid $border-width $off-black400;
+
+  &:focus,
+  &:hover {
+    background-color: $brand-color400;
+    outline: none;
+    color: $off-black400;
+  }
 }
 
 @media (min-width: 768px) {
