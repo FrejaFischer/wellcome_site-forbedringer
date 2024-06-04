@@ -2,10 +2,15 @@
 
 .medlems_Link {
   color: $white;
+  margin: $spacing-12 $spacing-24;
 
   &:hover,
   &:focus {
     text-decoration: underline;
+
+    .medlems_card {
+      filter: grayscale(0%);
+    }
   }
   .text_container {
     display: flex;
@@ -30,21 +35,13 @@
     }
   }
 }
-
 .medlems_card {
   height: $spacing-250;
   width: $spacing-250;
-  margin-top: $spacing-12;
-  margin-bottom: $spacing-12;
-  margin-left: $spacing-24;
-  margin-right: $spacing-24;
   border-radius: $border-radius;
   display: flex;
   box-shadow: 0 $spacing-4 $spacing-4 rgba(0, 0, 0, 0.25);
   filter: grayscale(100%);
-  &:hover {
-    filter: grayscale(0%);
-  }
 }
 
 .in_middle {
@@ -84,10 +81,6 @@
   .medlems_card {
     height: $spacing-320;
     width: $spacing-320;
-    margin-top: $spacing-24;
-    margin-bottom: $spacing-24;
-    margin-left: $spacing-12;
-    margin-right: $spacing-12;
   }
   .in_middle {
     filter: grayscale(100%);
