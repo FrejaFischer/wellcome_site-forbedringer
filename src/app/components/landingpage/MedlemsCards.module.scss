@@ -3,13 +3,31 @@
 .medlems_Link {
   color: $white;
 
-  &:hover {
+  &:hover,
+  &:focus {
     text-decoration: underline;
   }
-  h3 {
-    font-weight: $font-light;
-    font-size: $spacing-16;
-    line-height: 250%;
+  .text_container {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+
+    h3 {
+      font-weight: $font-light;
+      font-size: $spacing-16;
+      margin-bottom: $spacing-12;
+
+      .more {
+        display: none;
+      }
+    }
+    p {
+      font-family: $raleway-font;
+      font-weight: $font-regular;
+      font-size: $spacing-16;
+      color: $white;
+    }
   }
 }
 
@@ -28,6 +46,11 @@
     filter: grayscale(0%);
   }
 }
+
+.in_middle {
+  filter: grayscale(0%);
+}
+
 .overlay {
   display: flex;
   place-content: center;
@@ -66,11 +89,31 @@
     margin-left: $spacing-12;
     margin-right: $spacing-12;
   }
+  .in_middle {
+    filter: grayscale(100%);
+  }
 
   .medlems_Link {
-    h3 {
-      line-height: 400%;
-      font-size: $spacing-24;
+    .text_container {
+      h3 {
+        font-size: $spacing-24;
+        margin-bottom: $spacing-20;
+      }
+      p {
+        font-size: $spacing-16;
+      }
+    }
+    &:hover .text_container,
+    &:focus .text_container {
+      p {
+        display: none;
+      }
+      .text {
+        display: none;
+      }
+      .more {
+        display: block;
+      }
     }
   }
 }
