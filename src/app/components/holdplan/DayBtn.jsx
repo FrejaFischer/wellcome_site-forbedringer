@@ -16,8 +16,7 @@ export default function DayBtn({ day, setChosenDayNumber, chosenDayNumber, allCl
           //Når dagen er valgt skal chosenDayNumber ændres til det valgte. Dog skal vi oversætte dagens navn tilbage til dens tal
           setChosenDayNumber(dayNames.findIndex((item) => item === day));
         }}
-        disabled={isDisabled}
-      >
+        disabled={isDisabled}>
         <span className={styles.desk_text}>
           {day} <span className={styles.chosen_day}>Vælg {day}</span>
         </span>
