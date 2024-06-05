@@ -55,7 +55,7 @@ export default function Holdplan({ searchParams }) {
         });
       });
 
-      //Herunder tager vi vores nye data i allClasses + classSelection og sorterer det i deres "time.start" tidspunkt.
+      //Herunder tager vi vores nye data i allClasses + classSelection og sorterer det i deres "time.start" tidspunkt. (løsning fundet via google)
       //Derved får vi dem rykket rundt til at ligge i rækkefølge fra tidligste start tid til seneste
       setAllClasses((old) => old.sort((a, b) => a.time.start - b.time.start));
       setClassSelection((old) => old.sort((a, b) => a.time.start - b.time.start));
