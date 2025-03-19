@@ -17,11 +17,11 @@ export default function TeamView({ searchParams }) {
   useEffect(() => {
     async function fetchFunction({ searchParams }) {
       let headersList = {
-        apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imhvdmx1ZGNwcXVkcXZjcXRlYmxqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTQwMzI4MzEsImV4cCI6MjAyOTYwODgzMX0.5K-wz_oerFZ5hmvUq0IOPgJHn0e1sRYh57y_8pFqnKk",
+        apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFybHBqYXV2dXN0YWV5bGNldnZpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDIzNzUwNDMsImV4cCI6MjA1Nzk1MTA0M30.8k3jUmjSi5XZTibwTB1rALWKPRatCv8NFmsHuuPjDHM",
         Prefer: "return=representation",
       };
 
-      let response = await fetch(`https://hovludcpqudqvcqteblj.supabase.co/rest/v1/Hold?category=eq.${searchParams.category}`, {
+      let response = await fetch(`https://arlpjauvustaeylcevvi.supabase.co/rest/v1/Hold?category=eq.${searchParams.category}`, {
         method: "GET",
         headers: headersList,
       });
