@@ -14,8 +14,8 @@ export default function Footer() {
         />
       </div>
       <div className={styles.center}>
-        <FooterLink text="Download vores App" href="https://apps.apple.com/dk/app/wellcome-fitness-spa/id1459837941?l=da" />
-        <p>CVR 27218997</p>
+        <p>THIS IS A SCHOOL PROJECT</p>
+        <p>Made by Siff, Julie and Freja</p>
         <div className={styles.some_icons}>
           <Link className={styles.svg} href="https://www.facebook.com/p/Well-come-fitness-spa-100053023192175/">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

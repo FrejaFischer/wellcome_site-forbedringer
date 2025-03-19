@@ -4,11 +4,13 @@ import Caroussel from "./components/landingpage/Caroussel";
 import MedlemsSection from "./components/landingpage/MedlemsSection";
 import styles from "./landingpage.module.scss";
 import Layout from "./components/global/Layout";
+import Alert from "./components/global/Alert";
 
 export default function Home() {
   return (
     <Layout current={{ nav: "", site: "" }}>
       <main>
+        <Alert />
         {/* ________________________Hero Section______________ */}
         <article className={`${styles.hero_section}`}>
           <section className={styles.hero_text}>
